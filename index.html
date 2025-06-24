@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GM CV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="https://github.com/KiriaIT" class="logo">Gio</a>
+    <nav class="nav">
+      <ul class="nav-link">
+        <li><a href="index.html" class="active">მთავარი</a></li>
+        <li><a href="contact.html">საკონტაქტო</a></li>
+        <li><a href="about.html">ჩემს შესახებ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="home-img">
+      <img src="pic.jpg" alt="My Photo">
+    </div>
+    <div class="home-content">
+      <h1>Hello, It's <span>Gio</span></h1>
+      <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
+
+      <div class="pa">
+      <p>გამარჯობა, მე ვარ დამწყები ვებ დეველოპერი რომელიც ცდილობს განვითარდეს და უფრო მეტი ისწავლოს უნივერსიტეტთან შეფარდებით მსურს მუშაობაც.</p>
+      
+      <div class="social-icons">
+        <a href="https://github.com/KiriaIT" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/macharashvili_gioo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <a href="https://github.com/KiriaIT" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+
+  <script>
+    const words = ["Web Developer", "Web Designer", "Student"];
+    let index = 0;
+    const typedText = document.getElementById("typed-text");
+
+    function changeText() {
+      typedText.textContent = words[index];
+      index = (index + 1) % words.length;
+    }
+
+    setInterval(changeText, 2000);
+    changeText();
+  </script>
+</body>
+</html>
